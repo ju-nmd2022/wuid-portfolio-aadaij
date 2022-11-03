@@ -1,0 +1,150 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Times New Roman", Times, serif;
+}
+.backgroudimg {
+  background-image: url("../images/Jönköping_vapen_bw.png");
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position-x: center;
+  background-attachment: fixed;
+  background-color: #f3f3f3;
+}
+/* start of grid */
+.item-1 {
+  grid-area: hea;
+  /* header */
+}
+.item-2 {
+  grid-area: mai;
+  /* main */
+}
+.item-3 {
+  grid-area: rim;
+  /* right margin */
+}
+.item-4 {
+  grid-area: lem;
+  /* left margin */
+}
+.item-5 {
+  grid-area: ril;
+  /* right list */
+}
+.item-6 {
+  grid-area: lel;
+  /* left list */
+}
+.item-7 {
+  grid-area: foo;
+  /* footer  */
+}
+.item-8 {
+  grid-area: ti2;
+}
+
+.grid-container {
+  background-color: #f3f3f3;
+  background-size: 100px;
+  background-repeat: space;
+  background-image: url("../images/Jönköping_vapen_bw.png");
+  background-position: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 10em 1fr 5em 1fr 100px;
+  grid-template-areas:
+    "hea hea hea hea"
+    "rim mai mai ."
+    ". ti2 ti2 lem"
+    ". ril lel lem"
+    "foo foo foo foo";
+}
+/* end or grid */
+
+/* header */
+.item-1 p {
+  background-color: #1b1b1b;
+  color: #f3f3f3;
+  text-align: center;
+  padding: 10px;
+}
+
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f3f3f3;
+}
+h2 {
+  text-align: center;
+  background-color: #f3f3f3;
+  padding: 20px;
+  margin-bottom: 10px;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+h3 {
+  background-color: #00ff33;
+  padding: 10px;
+  margin: 1em;
+}
+
+article {
+  padding: 30px;
+  background-color: #1b1b1b;
+  color: #f3f3f3;
+  margin: 1em;
+}
+
+h3 {
+  text-align: center;
+}
+ul {
+  background-color: #1b1b1b;
+  padding: 2em;
+  margin: 1em;
+  color: #f3f3f3;
+}
+li {
+  padding-bottom: 10px;
+}
+
+/* start of images */
+img {
+  max-width: 15em;
+}
+.swamp {
+  padding: 2em;
+  background-color: #00ff33;
+}
+.jkpg {
+  padding-right: 20px;
+  padding: 2em;
+  background-color: #00ff33;
+  margin-right: 20px;
+}
+/* end of images */
+
+/* start of footer */
+.item-7 {
+  background-color: #1b1b1b;
+}
+
+.first-page {
+  background-color: #00ff33;
+  text-decoration: none;
+  padding: 10px;
+  color: #1b1b1b;
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  float: left;
+  margin: 20px;
+}
+
+.first-page:hover {
+  background-color: #f3f3f3;
+}
+/* end of footer */
