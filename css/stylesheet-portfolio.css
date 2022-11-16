@@ -1,0 +1,153 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+.font-family-lora {
+  font-family: "Lora", serif;
+}
+.font-family-raleway {
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 5em repeat(4, 1fr) 5em;
+  grid-template-rows: 5em repeat(6, fit-content);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.background-pink {
+  grid-area: 1 / 4 / 3 / 5;
+  background-color: #db93b0;
+}
+.background-blue {
+  background-color: #1098f7;
+}
+
+.logo {
+  grid-area: 1 / 1 / 2 / 2;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+}
+.logo img {
+  max-width: 4em;
+  position: fixed;
+}
+
+.div-navigation {
+  grid-area: 1 / 2 / 2 / 3;
+  text-align: left;
+  padding-top: 1.5em;
+  padding-left: 1em;
+  max-height: 5em;
+}
+.navigation {
+  list-style: none;
+}
+.navigation a {
+  color: #000;
+}
+.link-animation {
+  animation-name: colorAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes colorAnimation {
+  0% {
+    color: #397367;
+  }
+  33% {
+    color: #1098f7;
+  }
+  66% {
+    color: #db93b0;
+  }
+  100% {
+    color: #397367;
+  }
+}
+/* hero section */
+.big-letters {
+  font-size: 20em;
+  font-family: "Raleway", sans-serif;
+  padding-bottom: 0.1em;
+  text-align: center;
+}
+
+.div-column-1 {
+  grid-area: 2 / 2 / 3 / 3;
+  vertical-align: text-top;
+  line-height: 16em;
+  margin: auto;
+  z-index: -1;
+}
+
+.div-column-2 {
+  grid-area: 2 / 3 / 3 / 4;
+  line-height: 16em;
+  margin: auto;
+}
+.div-column-2 img {
+  max-width: 100%;
+  vertical-align: middle;
+  margin: auto;
+}
+.div-column-3 {
+  grid-area: 2 / 4 / 3 / 5;
+  line-height: 19em;
+  margin: auto;
+}
+.div-column-3 img {
+  max-width: 80%;
+  vertical-align: bottom;
+  margin-top: 12.5em;
+  margin-left: 10%;
+}
+.div-column-4 {
+  grid-area: 2 / 5 / 3 / 6;
+  margin: auto;
+}
+
+.div-coffee-book {
+  grid-area: 4 / 3 / 5 / 4;
+  display: block;
+  padding-left: 10%;
+  padding-top: 20%;
+  align-items: canter;
+  background-color: #1098f7;
+}
+.div-coffee-book img {
+  max-width: 90%;
+}
+.div-coffee-book img:hover {
+  filter: blur(5px);
+}
+.div-content-1 {
+  grid-area: 4 / 5 / 5 / 6;
+}
+.div-content-2 {
+  grid-area: 5 / 2 / 6 / 3;
+}
+.div-content-3 {
+  grid-area: 5 / 4 / 6 / 5;
+}
+.div-content-4 {
+  grid-area: 6 / 3 / 7 / 4;
+}
+.div-content-5 {
+  grid-area: 6 / 5 / 7 / 6;
+}
+.content img {
+  max-width: 100%;
+}
+.div-color-block {
+  grid-area: 7 / 4 / 8 / 5;
+  background-color: #397367;
+  min-height: 16em;
+}

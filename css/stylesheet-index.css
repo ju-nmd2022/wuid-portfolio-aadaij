@@ -1,147 +1,171 @@
+/* font-family: 'Lora', serif;
+font-family: 'Raleway', sans-serif; */
 * {
-  padding: 0px;
-  margin: 0px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.backgroudimage {
-  background-image: url("../images/rampant-lion-symbol.png");
-  background-repeat: no-repeat;
-  background-size: 800px;
-  background-position-x: center;
-  background-color: #f3f3f3;
-}
-main {
-  background-color: #f3f3f3;
-}
-h1 {
-  font-size: 50px;
-  text-align: center;
-  font-family: "Great Vibes", cursive;
-  padding: 50px;
-  background-color: #f3f3f3;
-}
-h2 {
-  font-size: 30px;
-  padding-top: 10px;
-}
-h3 {
-  font-size: 14px;
-  padding-bottom: 10px;
-}
-h4 {
-  background-color: #f3f3f3;
-  padding: 30px 30px 0px 30px;
-  font-family: "Great Vibes", cursive;
-  font-size: 30px;
-  border-color: #00ff33;
-  border-width: 5px 5px 0px 5px;
-  border-style: solid;
-}
-.pronounciation {
-  padding: 5px;
-  background-color: #f3f3f3;
-  border-color: #00ff33;
-  border-width: 0px 5px 5px 5px;
-  border-style: solid;
-}
-.space {
-  color: #00ff33;
-  font-size: 5px;
+  margin: 0%;
+  padding: 0%;
 }
 
-header {
-  background-color: #1b1b1b;
-  color: #f3f3f3;
-  text-align: center;
-}
-header p {
-  font-family: "Times New Roman", Times, serif;
-  padding: 10px;
-}
-.caps {
-  text-transform: uppercase;
-}
-.nametag {
-  background-color: #00ff33;
-  text-align: center;
-  border-radius: 10px;
-  max-width: 300px;
-  max-height: 200px;
-  margin: 10px 10px 10px 20px;
+.grid-container {
+  display: grid;
+  grid-template-columns: 5em repeat(4, 1fr) 5em;
+  grid-template-rows: 5em repeat(2, fit-content) repeat(7, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
-.childme {
-  max-width: 300px;
-  float: right;
-  border-color: #00ff33;
-  border-width: 40px 20px 40px 40px;
-  border-style: solid;
-  margin-right: 20px;
+/* start of navigation */
+.logo {
+  grid-area: 1 / 1 / 2 / 2;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
 }
-.adultme {
-  max-width: 300px;
-  margin-left: 20px;
-  border-color: #00ff33;
-  border-width: 40px 40px 40px 20px;
-  border-style: solid;
+.logo img {
+  max-width: 4em;
 }
-
-article p {
-  max-width: 320px;
-  margin: 20px;
-  padding: 20px;
-  background-color: #1b1b1b;
-  color: #f3f3f3;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.list {
-  background-color: #1b1b1b;
-  color: #f3f3f3;
-  max-width: 300px;
-  margin: 20px;
-  padding-bottom: 20px;
-  max-width: 360px;
-}
-.list p {
-  font-family: "Times New Roman", Times, serif;
-  padding: 20px 20px 5px 20px;
-}
-li {
-  font-family: "Times New Roman", Times, serif;
-  padding-left: 40px;
-}
-footer {
-  background-color: #1b1b1b;
-  color: #f3f3f3;
-  padding: 20px;
-  padding-bottom: 50px;
-  text-align: right;
-}
-.urbandictionary {
-  color: #f3f3f3;
-  text-decoration: none;
-}
-.urbandictionary:hover {
-  text-transform: uppercase;
-  color: #00ff33;
-}
-.quote {
-  font-family: "Times New Roman", Times, serif;
-  padding: 10px;
-}
-
-.second-page {
-  background-color: #00ff33;
-  text-decoration: none;
-  padding: 10px;
-
-  color: #1b1b1b;
-  font-family: "Times New Roman", Times, serif;
+.div-navigation {
+  grid-area: 1 / 2 / 2 / 3;
   text-align: left;
-  float: left;
+  padding-top: 1.5em;
+  padding-left: 6em;
+  max-height: 5em;
+  position: fixed;
+}
+.navigation {
+  list-style: none;
+  font-family: "Raleway", sans-serif;
+}
+.navigation a {
+  text-decoration: none;
+  color: #000;
 }
 
-.second-page:hover {
-  background-color: #f3f3f3;
+.link-animation {
+  animation-name: colorAnimation;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colorAnimation {
+  0% {
+    color: #397367;
+  }
+  33% {
+    color: #1098f7;
+  }
+  66% {
+    color: #db93b0;
+  }
+  100% {
+    color: #397367;
+  }
+}
+/* end of navigarion */
+
+.div-margin {
+  grid-area: 2 / 1 / 11 / 2;
+  writing-mode: vertical-rl;
+  /* the above line found from https://developer.mozilla.org/en-US/docs/Web/CSS/text-orientation */
+  color: #fff;
+  margin: auto;
+  text-align: justify;
+  overflow: hidden;
+}
+/* animation for margin */
+/* animation inspired by https://codepen.io/iskadar/pen/zLQjLe */
+
+.div-margin-background {
+  grid-area: 2 / 1 / 11 / 2;
+  background-color: #000;
+  z-index: -1;
+  /* source for z-index https://www.w3schools.com/cssref/pr_pos_z-index.php */
+}
+
+/* start of hero sections letters*/
+.div-letter-1 {
+  grid-area: 3 / 2 / 5 / 3;
+  margin: auto;
+  line-height: 5em;
+}
+.div-letter-2 {
+  grid-area: 4 / 4 / 6 / 5;
+  margin: auto;
+  line-height: 5em;
+}
+.div-letter-3 {
+  grid-area: 5 / 3 / 7 / 4;
+  margin: auto;
+  line-height: 5em;
+}
+.div-letter-4 {
+  grid-area: 2 / 5 / 4 / 6;
+  margin: auto;
+  line-height: 5em;
+}
+.hero-letters {
+  font-size: 22em;
+  font-family: "Raleway", sans-serif;
+}
+.green-letter {
+  color: #397367;
+}
+.white-letter {
+  color: #fff;
+}
+.div-green {
+  grid-area: 1 / 3 / 8 / 4;
+}
+.background-green {
+  background-color: #397367;
+  z-index: -1;
+  /* source for z-index https://www.w3schools.com/cssref/pr_pos_z-index.php */
+}
+/* end of hero sections letters*/
+
+.div-paragraph-1 {
+  grid-area: 6 / 4 / 8 / 5;
+  padding-left: 2em;
+  padding-bottom: 20em;
+  padding-top: 4em;
+}
+.div-paragraph-1 a {
+  text-decoration: none;
+  color: black;
+}
+
+.div-paragraph-2 {
+  grid-area: 8 / 3 / 9 / 4;
+}
+.div-pink {
+  grid-area: 8 / 4 / 10 / 5;
+}
+.like-list {
+  padding-left: 2em;
+}
+.background-pink {
+  background-color: #db93b0;
+}
+.div-footer {
+  grid-area: 10 / 5 / 11 / 7;
+
+  background-color: #000;
+  color: #fff;
+  text-align: right;
+  padding: 40px 20px;
+}
+.div-footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.div-lion {
+  grid-area: 8 / 4 / 10 / 7;
+}
+
+.font-lora {
+  font-family: "Lora", serif;
+}
+
+h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 3em;
 }
