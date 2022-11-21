@@ -71,6 +71,20 @@ font-family: 'Raleway', sans-serif; */
   overflow: hidden;
 }
 /* animation for margin */
+.flowing-text {
+  animation-name: flowingText;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes flowingText {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
 /* animation inspired by https://codepen.io/iskadar/pen/zLQjLe */
 
 .div-margin-background {

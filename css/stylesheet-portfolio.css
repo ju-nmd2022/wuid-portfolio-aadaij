@@ -134,8 +134,14 @@ a {
 .div-content-2 {
   grid-area: 5 / 2 / 6 / 3;
 }
+.div-content-2 img {
+  max-width: 6em;
+}
 .div-content-3 {
   grid-area: 5 / 4 / 6 / 5;
+}
+.div-column-3 img {
+  margin: auto;
 }
 .div-content-4 {
   grid-area: 6 / 3 / 7 / 4;
@@ -150,4 +156,66 @@ a {
   grid-area: 7 / 4 / 8 / 5;
   background-color: #397367;
   min-height: 16em;
+}
+
+@media screen and (max-width: 800px) {
+  * {
+    padding: 0px;
+    margin: 0px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 5em repeat(2, 1fr) 5em;
+    grid-template-rows: 5em repeat(9, fit-content);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .logo {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .div-navigation {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .div-column-1 {
+    grid-area: 2 / 2 / 3 / 3;
+
+    font-size: 0.8em;
+  }
+  .div-column-2 {
+    grid-area: 2 / 3 / 3 / 4;
+    font-size: 0.8em;
+  }
+  .div-column-3 {
+    grid-area: 3 / 2 / 4 / 3;
+    font-size: 0.8em;
+  }
+  .div-column-4 {
+    grid-area: 3 / 3 / 4 / 4;
+    font-size: 0.8em;
+  }
+  .div-coffee-book {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+  .div-content-1 {
+    grid-area: 5 / 3 / 6 / 4;
+  }
+  .div-content-2 {
+    grid-area: 6 / 2 / 7 / 3;
+  }
+  .div-content-3 {
+    grid-area: 7 / 3 / 8 / 4;
+  }
+  .div-content-4 {
+    grid-area: 8 / 2 / 9 / 3;
+  }
+  .div-content-5 {
+    grid-area: 9 / 3 / 10 / 4;
+  }
+  .div-color-block {
+    grid-area: 10 / 2 / 11 / 3;
+  }
+
+  .background-pink {
+    display: none;
+  }
 }
